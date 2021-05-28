@@ -32,6 +32,14 @@ let s:default_syntax.rxEmphasis = '\%(^\|\s\|[[:punct:]]\)\@<='.
       \'\%([[:punct:]]\|\s\|$\)\@='
 let s:default_syntax.char_emphasis = '\~'
 
+" text: ::underline::
+let s:default_syntax.rxUnderline = '\%(^\|\s\|[[:punct:]]\)\@<='.
+      \'::'.
+      \'\%([^::`[:space:]][^::`]*[^::`[:space:]]\|[^::`[:space:]]\)'.
+      \'::'.
+      \'\%([[:punct:]]\|\s\|$\)\@='
+let s:default_syntax.char_underline = '::'
+
 " text: _emphasis_
 " let s:default_syntax.rxItalic = '_[^_]\+_'
 let s:default_syntax.rxItalic = '\%(^\|\s\|[[:punct:]]\)\@<='.

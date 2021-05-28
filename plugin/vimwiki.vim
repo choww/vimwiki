@@ -128,7 +128,7 @@ function! s:setup_cleared_syntax() abort
   hi def VimwikiBold term=bold cterm=bold gui=bold
   hi def VimwikiItalic term=italic cterm=italic gui=italic
   hi def VimwikiBoldItalic term=bold cterm=bold gui=bold,italic
-  hi def VimwikiUnderline gui=underline
+  hi def VimwikiUnderline term=underline cterm=underline gui=underline
   if vimwiki#vars#get_global('hl_headers') == 1
     for i in range(1,6)
       execute 'hi def VimwikiHeader'.i.' guibg=bg guifg='

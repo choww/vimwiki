@@ -160,6 +160,8 @@ execute 'syn match VimwikiBoldChar contained /'.
       \ vimwiki#vars#get_syntaxlocal('char_bold').'/'.s:conceal
 execute 'syn match VimwikiEmphasisChar contained /'.
       \ vimwiki#vars#get_syntaxlocal('char_emphasis').'/'.s:conceal
+execute 'syn match VimwikiUnderlineChar contained /'.
+      \ vimwiki#vars#get_syntaxlocal('char_underline').'/'.s:conceal
 execute 'syn match VimwikiItalicChar contained /'.
       \ vimwiki#vars#get_syntaxlocal('char_italic').'/'.s:conceal
 execute 'syn match VimwikiBoldItalicChar contained /'.
@@ -214,6 +216,8 @@ execute 'syn match VimwikiBoldCharT contained /'
       \ .vimwiki#vars#get_syntaxlocal('char_bold').'/'
 execute 'syn match VimwikiEmphasisCharT contained /'
       \ .vimwiki#vars#get_syntaxlocal('char_emphasis').'/'
+execute 'syn match VimwikiUnderlineCharT contained /'
+      \ .vimwiki#vars#get_syntaxlocal('char_underline').'/'
 execute 'syn match VimwikiItalicCharT contained /'
       \ .vimwiki#vars#get_syntaxlocal('char_italic').'/'
 execute 'syn match VimwikiBoldItalicCharT contained /'
@@ -241,6 +245,8 @@ syntax match VimwikiTableRow /^\s*|.\+|\s*$/
                            \ VimwikiNoExistsLinkT,
                            \ VimwikiTodo,
                            \ VimwikiBoldT,
+                           \ VimwikiEmphasisT,
+                           \ VimwikiUnderlineT,
                            \ VimwikiItalicT,
                            \ VimwikiBoldItalicT,
                            \ VimwikiItalicBoldT,
@@ -286,6 +292,11 @@ execute 'syntax match VimwikiEmphasis /'.vimwiki#vars#get_syntaxlocal('rxEmphasi
       \ '/ contains=VimwikiEmphasisChar,@Spell'
 execute 'syntax match VimwikiEmphasisT /'.vimwiki#vars#get_syntaxlocal('rxEmphasis').
       \ '/ contained contains=VimwikiEmphasisCharT,@Spell'
+
+execute 'syntax match VimwikiUnderline /'.vimwiki#vars#get_syntaxlocal('rxUnderline'). 
+      \ '/ contains=VimwikiUnderlineChar,@Spell' 
+execute 'syntax match VimwikiUnderlineT /'.vimwiki#vars#get_syntaxlocal('rxUnderline'). 
+      \ '/ contained contains=VimwikiUnderlineCharT,@Spell' 
 
 execute 'syntax match VimwikiItalic /'.vimwiki#vars#get_syntaxlocal('rxItalic').
       \ '/ contains=VimwikiItalicChar,@Spell'
@@ -405,7 +416,8 @@ hi def link VimwikiItalicBold VimwikiBoldItalic
 hi def link VimwikiBoldItalicT VimwikiBoldItalic
 hi def link VimwikiItalicBoldT VimwikiBoldItalic
 
-hi def VimwikiUnderline gui=underline
+hi def VimwikiUnderline term=underline cterm=underline gui=underline
+hi def link VimwikiUnderlineT VimwikiUnderline
 
 hi def link VimwikiCode PreProc
 hi def link VimwikiCodeT VimwikiCode
@@ -448,6 +460,8 @@ hi def link VimwikiHTMLtag SpecialKey
 hi def link VimwikiEqInChar VimwikiMarkers
 hi def link VimwikiCellSeparator VimwikiMarkers
 hi def link VimwikiBoldChar VimwikiMarkers
+hi def link VimwikiUnderlineChar VimwikiMarkers
+hi def link VimwikiEmphasisChar VimwikiMarkers
 hi def link VimwikiItalicChar VimwikiMarkers
 hi def link VimwikiBoldItalicChar VimwikiMarkers
 hi def link VimwikiItalicBoldChar VimwikiMarkers
@@ -460,6 +474,8 @@ hi def link VimwikiHeaderChar VimwikiMarkers
 hi def link VimwikiEqInCharT VimwikiMarkers
 hi def link VimwikiBoldCharT VimwikiMarkers
 hi def link VimwikiItalicCharT VimwikiMarkers
+hi def link VimwikiUnderlineCharT VimwikiMarkers
+hi def link VimwikiEmphasisCharT VimwikiMarkers
 hi def link VimwikiBoldItalicCharT VimwikiMarkers
 hi def link VimwikiItalicBoldCharT VimwikiMarkers
 hi def link VimwikiDelTextCharT VimwikiMarkers

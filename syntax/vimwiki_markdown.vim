@@ -29,6 +29,14 @@ let s:markdown_syntax.rxEmphasis = '\%(^\|\s\|[[:punct:]]\)\@<='.
       \'\%([[:punct:]]\|\s\|$\)\@='
 let s:markdown_syntax.char_emphasis = '~'
 
+" text: ::underlin::e
+let s:markdown_syntax.rxUnderline = '\%(^\|\s\|[[:punct:]]\)\@<='.
+      \'\::'.
+      \'\%([^::`[:space:]][^::`]*[^::`[:space:]]\|[^::`[:space:]]\)'.
+      \'\::'.
+      \'\%([[:punct:]]\|\s\|$\)\@='
+let s:markdown_syntax.char_underline = '::'
+
 " text: _italic_
 " let s:markdown_syntax.rxItalic = '_[^_]\+_'
 let s:markdown_syntax.rxItalic = '\%(^\|\s\|[[:punct:]]\)\@<='.

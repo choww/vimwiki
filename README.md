@@ -12,6 +12,7 @@
     - [Vundle](#installation-using-vundle)
 - [Basic Markup](#basic-markup)
     - [Lists](#lists)
+- [Custom Markup](#custom-markup)
 - [Key Bindings](#key-bindings)
 - [Commands](#commands)
 - [Changing Wiki Syntax](#changing-wiki-syntax)
@@ -196,7 +197,8 @@ foo := func() {
 
 Use these if you want to add more colour/types of emphasis to your wiki
 
-~emphasis~ -- emphasis 1
+- `~emphasis~` -- emphasis 1
+- `::underline::` - underline 1
 
 ## Key bindings
 
