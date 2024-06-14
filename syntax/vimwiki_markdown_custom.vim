@@ -171,6 +171,7 @@ syntax match VimwikiTableRow /^\s*|.\+|\s*$/
                            \ VimwikiTodo,
                            \ VimwikiBoldT,
                            \ VimwikiItalicT,
+                           \ VimwikiEmphasisT,
                            \ VimwikiBoldItalicT,
                            \ VimwikiItalicBoldT,
                            \ VimwikiDelTextT,

@@ -418,6 +418,13 @@ function! vimwiki#u#hi_typeface(dic) abort
 
   let nested = vimwiki#u#get_syntax_dic().nested
 
+  " Empahsis
+  if has_key(a:dic, 'emphasis')
+    for e in a:dic['emphasis']
+      call vimwiki#u#hi_tag(e[0], e[1], 'VimwikiEmphasis', nested, 'VimwikiEmphasis')
+     endfor
+   endif
+
   " Bold Italic
   if has_key(a:dic, 'bold_italic')
     for bi in a:dic['bold_italic']

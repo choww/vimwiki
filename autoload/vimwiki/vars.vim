@@ -702,6 +702,7 @@ function! s:get_default_syntaxlocal() abort
         \   'bold': vimwiki#u#hi_expand_regex([['\*', '\*', '[*]', 0]]),
         \   'italic': vimwiki#u#hi_expand_regex([['_', '_', '[_]', 0]]),
         \   'underline': vimwiki#u#hi_expand_regex([]),
+        \   'emphasis': vimwiki#u#hi_expand_regex([['\~', '\~', '[*]', 0]]),
         \   'bold_italic': vimwiki#u#hi_expand_regex([['\*_', '_\*', '[*_]', 1], ['_\*', '\*_', '[*_]', 1]]),
         \   'code': [
         \       ['\%(^\|[^`]\)\@<=`\%($\|[^`]\)\@=',
@@ -762,6 +763,9 @@ function! s:get_markdown_syntaxlocal() abort
         \     ['_\*', '\*_', '[_*]', 1],
         \     ]),
         \   'underline': vimwiki#u#hi_expand_regex([]),
+        \   'emphasis': vimwiki#u#hi_expand_regex([
+        \     ['\~', '\~', '[_*]', 1],
+        \     ]),
         \   'bold_italic': vimwiki#u#hi_expand_regex([
         \     ['___', '___', '[_*]', 1],
         \     ['\*\*\*', '\*\*\*', '[_*]', 1],

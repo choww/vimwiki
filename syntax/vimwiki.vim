@@ -248,6 +248,7 @@ syntax match VimwikiTableRow /^\s*|.\+|\s*$/
                            \ VimwikiNoExistsLinkT,
                            \ VimwikiTodo,
                            \ VimwikiBoldT,
+                           \ VimwikiEmphasisT, 
                            \ VimwikiItalicT,
                            \ VimwikiBoldItalicT,
                            \ VimwikiItalicBoldT,
@@ -404,6 +405,9 @@ hi def VimwikiItalic term=italic cterm=italic gui=italic
 hi def link VimwikiItalicT VimwikiItalic
 
 hi def VimwikiUnderline term=underline cterm=underline gui=underline
+
+hi def link VimwikiEmphasis Normal
+hi def link VimwikiEmpahsisT VimwikiEmpahsis 
 
 " Typeface 2
 " Bold > Italic > Underline

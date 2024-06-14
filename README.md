@@ -12,6 +12,8 @@
     - [Vundle](#installation-using-vundle)
 - [Basic Markup](#basic-markup)
     - [Lists](#lists)
+    - [Todo Lists](#todo-lists)
+- [Custom Markup](#custom-markup)
 - [Key Bindings](#key-bindings)
 - [Commands](#commands)
 - [Changing Wiki Syntax](#changing-wiki-syntax)
@@ -196,6 +198,11 @@ For other syntax elements, see `:h vimwiki-syntax`
   - [ ] Incomplete item
 ```
 
+## Custom Markup
+Use these if you want to add more colour/types of emphasis to your wiki
+
+* ~emphasis~ -- emphasis 1
+
 ## Key bindings
 
 ### Normal mode
@@ -264,7 +271,7 @@ See [g:vimwiki_global_ext](https://github.com/vimwiki/vimwiki/blob/619f04f89861c
 
 if you want to turn off support for other extension(for example, disabling
 accidently creating new wiki and link for normal markdown files), set the
-following option in your `.vimrc` before packadd vimwiki: 
+following option in your `.vimrc` before packadd vimwiki:
 
 ```vim
 let g:vimwiki_ext2syntax = {}
