@@ -425,6 +425,13 @@ function! vimwiki#u#hi_typeface(dic) abort
      endfor
    endif
 
+  " Underline
+  if has_key(a:dic, 'underline')
+    for e in a:dic['underline']
+      call vimwiki#u#hi_tag(e[0], e[1], 'VimwikiUnderline', nested, 'VimwikiUnderline')
+     endfor
+   endif
+
   " Bold Italic
   if has_key(a:dic, 'bold_italic')
     for bi in a:dic['bold_italic']
